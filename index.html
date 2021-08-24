@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE BAND</title>
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./assets/css/style.css">    
+    <link rel="stylesheet" href="./assets/css/style.css"> 
+    <link rel="stylesheet" href="./assets/css/responsive.css">   
 </head>
 <body>
     <div id="main">
@@ -16,7 +17,9 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="#">More <i class="nav-circle-down ti-arrow-circle-down"></i></a>
+                    <a href="#">More
+                        <i class="nav-circle-down ti-arrow-circle-down"></i>
+                    </a>
                     <ul class="subNav">
                         <li><a href="">Marchandise</a></li>
                         <li><a href="">Extras</a></li>
@@ -26,6 +29,9 @@
             </ul>
             <div class="btn-search">
                 <i class="search-icon ti-search"></i>
+            </div>
+            <div class="mobile-menu-btn" id="mobile-menu">
+                <i class="mobile-menu-icon ti-menu"></i>
             </div>
         </div>
 
@@ -49,15 +55,15 @@
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
                     aliquip ex ea commodo consequat.</p>
                 <div class="row members-list">
-                    <div class="col col-3 member-item text-center">
+                    <div class="member-item col col-3 member-item text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/member.jpg" alt="Name" class="member-img">
                     </div>
-                    <div class="col col-3 member-item text-center">
+                    <div class="member-item col col-3 member-item text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/member.jpg" alt="Name" class="member-img">
                     </div>
-                    <div class="col col-3 member-item text-center">
+                    <div class="member-item col col-3 member-item text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/member.jpg" alt="Name" class="member-img">
                     </div>
@@ -75,7 +81,7 @@
                     </ul>
 
                     <div class="row place-list">
-                        <div class="col col-3 place-item">
+                        <div class="col col-3 place-item mt-16">
                             <img src="./assets/img/paris.jpg" alt="Paris" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">Paris</h3>
@@ -83,7 +89,7 @@
                                 <button class="btn-buy js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col col-3  place-item">
+                        <div class="col col-3  place-item mt-16">
                             <img src="./assets/img/ny.jpg" alt="New York" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">New York</h3>
@@ -91,7 +97,7 @@
                                 <button class="btn-buy js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class=" col col-3 place-item">
+                        <div class=" col col-3 place-item mt-16">
                             <img src="./assets/img/sanfran.jpg" alt="San Francisco" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">San Francisco</h3>
@@ -108,7 +114,7 @@
                 <h2 class="content-heading">CONTACT</h2>
                 <P class="content-sub-heading">we love our fans</P>
                 <div class="row contact-body">
-                    <div class="col col-2 contact-list">
+                    <div class="col s-col-full col-2 contact-list">
                         <p>Fan? Drop a note.</p>
                         <ul>
                             <li><i class="ti-location-pin"></i> Chicago, US</li>
@@ -116,13 +122,13 @@
                             <li><i class="ti-email"></i> Email: mail@mail.com</li>
                         </ul>
                     </div>
-                    <div class="col col-2">
+                    <div class="col s-col-full col-2 contact-from">
                         <form action="">
                             <div class="row">
-                                <div class="col col-2">
+                                <div class="col s-mt-8 s-col-full col-2">
                                     <input type="text" placeholder="Your Name" required class="input-controll">
                                 </div>
-                                <div class="col col-2">
+                                <div class="col s-mt-8 s-col-full col-2">
                                     <input type="email" placeholder="Your Email" required class="input-controll">
                                 </div>
                             </div>
@@ -139,9 +145,7 @@
         </div>
  
         <div id="maps">
-            <!-- <div class="maps-content text-center">
-                Thank you for visting!
-            </div> -->
+            <img src="./assets/img/maps.jpg" alt="">
         </div>
         
         <div id="footer">
@@ -149,11 +153,9 @@
                 <div class="to-up">
                     <a href="#" class="to-up"><i class="ti-angle-up"></i></a>
                 </div>
-                <ul>
-                    <li><a class="social-item" href="www.facebook.com"><i class="ti-facebook"></i></a></li>
-                    <li><a class="social-item" href="www.google.com/intl/vi/gmail/about/"><i class="ti-google"></i></a></li>
-                    <li><a class="social-item" href="www.pinterest.com/"><i class="ti-pinterest"></i></a></li>
-                </ul>
+                <a class="social-item" href="www.facebook.com"><i class="ti-facebook"></i></a>
+                <a class="social-item" href="www.google.com/intl/vi/gmail/about/"><i class="ti-google"></i></a>
+                <a class="social-item" href="www.pinterest.com/"><i class="ti-pinterest"></i></a>
             </div>
         </div>
 
@@ -202,6 +204,36 @@
                 modal.classList.add('open');
 
             });
+        }
+    </script>
+
+    <!-- responsive -->
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var curentHeight = header.clientHeight;
+        mobileMenu.onclick = function(){
+            var isClose = curentHeight;
+            if(isClose){
+                header.style.height='auto';
+            }else{
+                header.style.height= null;
+            }
+        }
+
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i=0; i< menuItems.length; i++) {
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function(event){
+                var isParentmenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subNav');
+                if(isParentmenu){
+                    event.preventDefault();
+                }else{
+                    header.style.height= null;
+                }               
+                
+            }
         }
     </script>
 </body>

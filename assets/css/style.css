@@ -69,7 +69,7 @@ html{
 4. Kiểu dáng: font, hình (tròn, vuông,...)
 */
 #main{
-
+    /* overflow: hidden; */
 }
 
 .black{
@@ -77,18 +77,18 @@ html{
     color:#fff;
 }
 #header{
- height: 46px;
- background-color: #000;
- position: fixed;
- top:0;
- right:0;
- left:0;
- z-index:1;
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    z-index:1;
 }
 
 #nav{
     display: inline-block;
-}
+} 
 
 #nav, .subNav{
     list-style-type: none;
@@ -140,12 +140,21 @@ html{
     font-size: 14px;
 }
 
+#header .mobile-menu-btn{
+    position: absolute;
+    top:0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
 #header .btn-search{
     float:right;
     cursor: pointer;
     padding: 0 20px;
 }
 
+#header .mobile-menu-icon,
 #header .search-icon{
     color:white;
     font-size: 20px;
@@ -188,9 +197,12 @@ html{
 }
 
 #content .section-content{
-    width:1050px;
+    width:800px;
+    max-width: 100%;
     padding: 64px 0;
     margin:auto;
+    padding-left: 16px;
+    padding-right:16px;
 }
 
 #content .content-heading{
@@ -227,6 +239,7 @@ html{
 }
 
 #content .member-img{
+    max-width: 100%;
     width:200px;
     margin-top: 15px;
     border-radius: 50%;
@@ -265,7 +278,7 @@ html{
 }
 
 .place-list{
-    margin-top:20px;
+    margin-top:16px;
     margin-bottom:32px;
 }
 
@@ -468,12 +481,8 @@ html{
     border: 1px solid #333;
 }
 
-#maps{
-    background: url('/assets/img/maps.jpg');
-    height: 100vh;
-    /* display: flex;
-    align-items: center;
-    align-content: center; */
+#maps img{
+    width:100%;
 }
 
 #footer{
@@ -482,35 +491,26 @@ html{
     padding:20px;
 }
 
-#footer ul{
-    list-style-type: none;
-    padding-top:32px;
-}
-
-#footer ul li{
-    display: inline-block;
-    background-color: #fff;
-    padding: 14px;
-    border-radius: 50%;
-    margin-left: 5px;
-}
-
-#footer .to-up a{
+.to-up{
+    text-decoration: none;
     color:#fff;
-    font-weight: bold;
-    font-size:30px;
-    text-decoration: none;
-    height: 35px;
-    opacity: 0.8;
+    margin-bottom: 20px;
 }
 
-#footer .to-up:hover{
-    opacity: 1;
-}
-
-#footer .social-item{
+.social-item{
+    display: inline-block;
+    font-size: 15px;
+    padding:10px;
     text-decoration: none;
+    border-radius: 50%;
+    border: 1px solid transparent;
     color: #352e2e;
-    font-weight: bold;
-    font-size: 16px;
+    background-color:  #fff;
+    transition: ease 0.3s;
+}
+
+.social-item:hover{
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: #352e2e;
 }
